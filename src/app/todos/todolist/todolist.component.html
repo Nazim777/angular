@@ -1,0 +1,27 @@
+<h1>Todo List components</h1>
+@for(todo of todos;track todo.id){
+    <div class="container mt-4">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+           
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item">
+               
+                  <div>
+                    <h5>{{ todo.title }}</h5>
+                    <p>{{ todo.desc }}</p>
+                  </div>
+                 
+                    <button class="btn btn-warning mr-2" RouterLink="createtodo" (click)="navigateToEdit(todo.id)">Edit</button>
+                    <button class="btn btn-danger ml-4" (click)="handleDelete(todo.id)">Delete</button>
+                  
+               
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+}
